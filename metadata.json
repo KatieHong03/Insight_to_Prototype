@@ -1,0 +1,6 @@
+{
+  "name": "From Insight to Prototype",
+  "description": "Turn research and problem insights into structured instructions for AI prototyping tools, critique early versions, and iterate with precision.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
