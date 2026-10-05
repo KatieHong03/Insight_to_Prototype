@@ -19,12 +19,12 @@ import { Slide9Critique } from './components/slides/Slide9Critique';
 import { Slide10Revision } from './components/slides/Slide10Revision';
 import { Slide11Reflect } from './components/slides/Slide11Reflect';
 
-const STORAGE_KEY = 'from_insight_to_prototype_state_v4';
-const SLIDE_STORAGE_KEY = 'from_insight_to_prototype_slide_v4';
+const STORAGE_KEY = 'from_insight_to_prototype_state_v6';
+const SLIDE_STORAGE_KEY = 'from_insight_to_prototype_slide_v6';
 
 const initialBlankData: LearnerData = {
   prototypeType: 'page',
-  prototypeTitle: 'A web page for a company that sells background check tech services for the education sector (for HR to buy in their service)',
+  prototypeTitle: 'B2B landing page for education sector to buy background check services',
   user: 'K–12 School District HR Director',
   userNeed: 'They need to understand turnaround times, compliance mandates, costs, and whether the service fits hiring rushes before opening day.',
   requirements: '1. Hero section with 24–48h substitute turnaround guarantee and "Request District Demo" primary CTA\n2. State Department of Education (DOE) & FBI fingerprinting statutory compliance matrix\n3. Frontline Education and PowerSchool ATS integration badge showcase\n4. Public school district volume licensing tier guide and Board approval RFP kit\n5. PBSA Accreditation seal and FCRA legal safety compliance disclaimers',
@@ -48,9 +48,9 @@ const initialBlankData: LearnerData = {
   revisionRemove: 'The unsupported 99.8% compliance claim.',
   generatedRevisionPrompt: '',
   isRevisionPromptGenerated: false,
-  reflectAiWell: 'It quickly generated a clean, readable layout and responsive card components in seconds.',
-  reflectAiMisunderstood: 'It assumed schools purchase software like standard corporations and invented an unverified accuracy statistic.',
-  reflectUserDecided: 'I prioritized turnaround time over marketing slogans and enforced verification on all compliance claims.',
+  reflectAiWell: '',
+  reflectAiMisunderstood: '',
+  reflectUserDecided: '',
 };
 
 export default function App() {
@@ -249,7 +249,7 @@ export default function App() {
       />
 
       {/* Main Single-Slide Container */}
-      <main className="flex-1 max-w-5xl xl:max-w-6xl w-full mx-auto px-6 sm:px-8 lg:px-12 py-8 sm:py-12 flex flex-col justify-center">
+      <main className="flex-1 max-w-5xl xl:max-w-6xl w-full mx-auto px-4 sm:px-6 py-2.5 sm:py-4 flex flex-col justify-center">
         {/* Slide 1 — Welcome */}
         {currentSlide === 1 && (
           <Slide1Welcome onContinue={nextSlide} />
@@ -384,10 +384,10 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="py-5 border-t border-stone-200/80 bg-white/70 text-xs sm:text-sm text-stone-500 text-center">
-        <div className="max-w-5xl xl:max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <footer className="py-2.5 border-t border-stone-200/80 bg-white/70 text-xs text-stone-500 text-center">
+        <div className="max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-1">
           <span className="font-serif text-stone-800">From Insight to Prototype</span>
-          <span className="text-xs text-stone-500">
+          <span className="text-[11px] text-stone-500">
             Slide {currentSlide} of 12 · Use Back and Continue or keyboard ← → to navigate
           </span>
         </div>
